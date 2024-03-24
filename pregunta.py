@@ -7,8 +7,6 @@ correctamente. Tenga en cuenta datos faltantes y duplicados.
 
 """
 import pandas as pd
-import nltk
-from textblob import TextBlob
 
 def clean_data():
 

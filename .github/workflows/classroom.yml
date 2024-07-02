@@ -1,6 +1,5 @@
 name: Autograding Tests
 'on':
-- push
 - workflow_dispatch
 - repository_dispatch
 permissions:
@@ -16,7 +15,7 @@ jobs:
       uses: actions/checkout@v4
     - name: Test 01
       id: test-01
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Test 01
         setup-command: pip3 install pyarrow pandas
@@ -25,7 +24,7 @@ jobs:
         max-score: 1
     - name: Test 02
       id: test-02
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Test 02
         setup-command: pip3 install pyarrow pandas
@@ -34,7 +33,7 @@ jobs:
         max-score: 1
     - name: Test 03
       id: test-03
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Test 03
         setup-command: pip3 install pyarrow pandas
@@ -43,7 +42,7 @@ jobs:
         max-score: 1
     - name: Test 04
       id: test-04
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Test 04
         setup-command: pip3 install pyarrow pandas
@@ -52,7 +51,7 @@ jobs:
         max-score: 1
     - name: Test 05
       id: test-05
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Test 05
         setup-command: pip3 install pyarrow pandas
@@ -61,7 +60,7 @@ jobs:
         max-score: 1
     - name: Test 06
       id: test-06
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Test 06
         setup-command: pip3 install pyarrow pandas
@@ -70,7 +69,7 @@ jobs:
         max-score: 1
     - name: Test 07
       id: test-07
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Test 07
         setup-command: pip3 install pyarrow pandas
@@ -79,7 +78,7 @@ jobs:
         max-score: 1
     - name: Test 08
       id: test-08
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Test 08
         setup-command: pip3 install pyarrow pandas
@@ -88,7 +87,7 @@ jobs:
         max-score: 1
     - name: Test 09
       id: test-09
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Test 09
         setup-command: pip3 install pyarrow pandas
@@ -96,7 +95,7 @@ jobs:
         timeout: 10
         max-score: 1
     - name: Autograding Reporter
-      uses: education/autograding-grading-reporter@v1
+      uses: classroom-resources/autograding-grading-reporter@v1
       env:
         TEST-01_RESULTS: "${{steps.test-01.outputs.result}}"
         TEST-02_RESULTS: "${{steps.test-02.outputs.result}}"
